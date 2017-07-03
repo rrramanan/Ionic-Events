@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Events
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <h3 id="events-heading1" style="color:#000000;">
+    Login
+  </h3>
+  <div id="events-markdown1" style="text-align:justify;" class="show-list-numbers-and-dots">
+    <p style="margin-top:0px;color:#000000;font-size:15px;">
+      Click the login button to use the credentials below. Then, toggle the menu to see the menu items change.
+    </p>
+  </div>
+
+  <form id="events-form3" [formGroup]="frmLogin">
+   
+    <h5 id="events-heading2" style="color:#000000;"> Name </h5>
+  
+    <ion-item id="events-input1">
+      <ion-label></ion-label>
+      <ion-input type="text" formControlName = "textName" ng-value="Administrator"  disabled="true"></ion-input>
+    </ion-item>
+
+    <h5 id="events-heading3" style="color:#000000;"> Username </h5>
+   
+    <ion-item id="events-input2">
+      <ion-label></ion-label>
+      <ion-input type="text" formControlName = "textUsername" ng-value="Admin" disabled="true"></ion-input>
+    </ion-item>
+  
+    <button id="events-button2" ion-button primary (click)="login()" block>  Login </button>
+   
+  </form>
+
+  <button id="events-button2" ion-button color="secondary" menuToggle block>
+    Toggle Menu
+  </button>
+</ion-content>
